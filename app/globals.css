@@ -9,12 +9,15 @@
   --blue-aqua: #0093c7;
   --charcoal-900: rgba(33, 37, 41, 1);
   --ocean-navy: rgba(0, 44, 69, 0.85);
+  --ocean-teal-600: #0f7b93;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-ocean-navy: var(--ocean-navy);
+  --color-ocean-teal-600: var(--ocean-teal-600);
+  --color-blue-aqua: var(--blue-aqua);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --color-blue-aqua: var(--blue-aqua);

@@ -4,4 +4,12 @@
     height: 110vh;
     width: 100%;
   }
+  &__news {
+    background-image: url("../../public/images/all_bg_3.png");
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    width: 100%;
+    display: block;
+  }
 }
