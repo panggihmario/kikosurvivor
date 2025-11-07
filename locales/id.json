@@ -1,0 +1,9 @@
+{
+  "products": {
+    "cart": "Tambah cart"
+  },
+  "common": {
+    "players": "Pemain",
+    "allAges": "Semua Umur"
+  }
+}

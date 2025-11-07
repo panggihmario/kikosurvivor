@@ -1,18 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+
 @import "tailwindcss";
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --blue-aqua: #0093c7;
+  --charcoal-900: rgba(33, 37, 41, 1);
+  --ocean-navy: rgba(0, 44, 69, 0.85);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-ocean-navy: var(--ocean-navy);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --color-blue-aqua: var(--blue-aqua);
+  --color-charcoal-900: var(--charcoal-900);
+  --font-roboto: "Roboto", sans-serif;
+  --breakpoint-mobile-xs: 20rem /** 320px */;
+  --breakpoint-mobile-sm: 22.5rem /** 360px */;
+  --breakpoint-mobile-md: 23.4375rem /** 375px */;
+  --breakpoint-mobile-lg: 24.375rem /** 390px */;
+  --breakpoint-mobile-xl: 25.875rem /** 414px */;
+  --breakpoint-tablet-sm: 37.5rem /** 600px */;
+  --breakpoint-tablet-sm2: 40rem /** 640px */;
+  --breakpoint-tablet-md: 48rem /** 768px */;
+  --breakpoint-tablet-lg: 52.125rem /** 834px */;
+  --breakpoint-tablet-xl: 64rem /** 1024px */;
+  --breakpoint-laptop-md: 80rem /** 1280px */;
+  --breakpoint-laptop-lg: 85.375rem /** 1366px */;
+  --breakpoint-qhd: 90rem /** 1440px */;
+  --breakpoint-desktop-sm: 96rem /** 1536px */;
+  --breakpoint-desktop-md: 100rem /** 1600px */;
+  --breakpoint-desktop-lg: 105rem /** 1680px */;
+  --breakpoint-fullhd: 120rem /** 1920px */;
+  --breakpoint-desktop-2xl: 160rem /** 2560px */;
+  --breakpoint-desktop-4k: 240rem /** 3840px */;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
@@ -20,7 +49,8 @@
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  color: var(--background);
 }

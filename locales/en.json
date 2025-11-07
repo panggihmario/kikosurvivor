@@ -1,0 +1,9 @@
+{
+  "products": {
+    "cart": "Add to Cart"
+  },
+  "common": {
+    "players": "Players",
+    "allAges": "All Ages"
+  }
+}
