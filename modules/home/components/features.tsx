@@ -1,0 +1,74 @@
+"use client";
+
+import styles from "../styles.module.scss";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
+import Image from "next/image";
+import Feature1 from "@/public/images/hm_lb_bg_1.png";
+import Feature2 from "@/public/images/hm_lb_bg_2.png";
+import Feature3 from "@/public/images/hm_lb_bg_3.png";
+export const Features = () => {
+  const pagination = {
+    clickable: true,
+    // renderBullet: function (index: number, className: string): string {
+    //   return '<span class="' + className + '">' + (index + 1) + "</span>";
+    // },
+  };
+  return (
+    <section className={styles["kiko__background"]}>
+      <div className="p-4">
+        <Swiper
+          spaceBetween={50}
+          onSlideChange={() => console.log("slide change")}
+          onSwiper={(swiper) => console.log(swiper)}
+          pagination={pagination}
+          modules={[Pagination, Autoplay]}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
+        >
+          <SwiperSlide>
+            <div className="flex items-center gap-2 ">
+              <div>
+                <Image src={Feature1} alt="Feature 1" />
+              </div>
+              <div className="text-bold text-blue-aqua text-3xl">
+                KALAHKAN MUSUHMU DAN JADILAH LEBIH KUAT!
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="flex items-center gap-2 m-auto ">
+              <div>
+                <Image
+                  width={339}
+                  height={466}
+                  src={Feature2}
+                  alt="Feature 1"
+                />
+              </div>
+              <div className="text-bold text-blue-aqua text-3xl m-auto">
+                TAKLUKKAN SEMUA STAGE-NYA & KUMPULKAN HARTA KARUNNYA
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="flex items-center gap-2 ">
+              <div>
+                <Image src={Feature3} alt="Feature 1" />
+              </div>
+              <div className="text-bold text-blue-aqua text-3xl">
+                SELAMATKAN DUNIA "MERMAIDS & DRAGONS" DARI BOS-BOS YANG JAHAT
+              </div>
+            </div>
+          </SwiperSlide>
+        </Swiper>
+      </div>
+    </section>
+  );
+};

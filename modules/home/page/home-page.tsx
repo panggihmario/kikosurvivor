@@ -7,7 +7,7 @@ import Plus from "@/public/images/hm_pre_3_plus.png";
 import Person from "@/public/images/hm_pre_person.png";
 import Star from "@/public/images/hm_pre_star.png";
 import styles from "../styles.module.scss";
-import { News } from "../components";
+import { News, Intro, Characters, Features, Follow } from "../components";
 export default async function HomePage({
   params,
 }: {
@@ -96,14 +96,11 @@ export default async function HomePage({
             </div>
           </div>
         </div>
-        <News />
-      </main>
-
-      <main className="h-96 flex items-center justify-center">
-        <div className="text-red-500">
-          <h1>halo</h1>
-          <p>kiko survicor</p>
-        </div>
+        <News lang={lang} />
+        <Intro lang={lang} />
+        <Characters />
+        <Features />
+        <Follow />
       </main>
     </div>
   );
