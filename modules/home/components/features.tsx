@@ -11,20 +11,22 @@ import Image from "next/image";
 import Feature1 from "@/public/images/hm_lb_bg_1.png";
 import Feature2 from "@/public/images/hm_lb_bg_2.png";
 import Feature3 from "@/public/images/hm_lb_bg_3.png";
-export const Features = () => {
+import { FC } from "react";
+import { type Dictionary } from "@/types";
+
+type FeaturesProps = {
+  dict: Dictionary;
+};
+
+export const Features: FC<FeaturesProps> = ({ dict }) => {
   const pagination = {
     clickable: true,
-    // renderBullet: function (index: number, className: string): string {
-    //   return '<span class="' + className + '">' + (index + 1) + "</span>";
-    // },
   };
   return (
     <section className={styles["kiko__background"]}>
       <div className="p-4">
         <Swiper
           spaceBetween={50}
-          onSlideChange={() => console.log("slide change")}
-          onSwiper={(swiper) => console.log(swiper)}
           pagination={pagination}
           modules={[Pagination, Autoplay]}
           autoplay={{
@@ -38,7 +40,7 @@ export const Features = () => {
                 <Image src={Feature1} alt="Feature 1" />
               </div>
               <div className="text-bold text-blue-aqua text-3xl">
-                KALAHKAN MUSUHMU DAN JADILAH LEBIH KUAT!
+                {dict.common.defeatEnemy}
               </div>
             </div>
           </SwiperSlide>
@@ -53,7 +55,7 @@ export const Features = () => {
                 />
               </div>
               <div className="text-bold text-blue-aqua text-3xl m-auto">
-                TAKLUKKAN SEMUA STAGE-NYA & KUMPULKAN HARTA KARUNNYA
+                {dict.common.conquerStages}
               </div>
             </div>
           </SwiperSlide>
@@ -63,7 +65,7 @@ export const Features = () => {
                 <Image src={Feature3} alt="Feature 1" />
               </div>
               <div className="text-bold text-blue-aqua text-3xl">
-                SELAMATKAN DUNIA "MERMAIDS & DRAGONS" DARI BOS-BOS YANG JAHAT
+                {dict.common.saveWorld}
               </div>
             </div>
           </SwiperSlide>

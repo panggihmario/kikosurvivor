@@ -99,8 +99,8 @@ export default async function HomePage({
         <News lang={lang} />
         <Intro lang={lang} />
         <Characters />
-        <Features />
-        <Follow />
+        <Features dict={dict} />
+        {/* <Follow /> */}
       </main>
     </div>
   );

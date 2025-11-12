@@ -1,0 +1,26 @@
+.kiko-event {
+  &__list {
+    width: calc(1200 / var(--design-width) * var(--screen-width));
+    margin: 0 auto;
+    padding-block: 4rem;
+  }
+  &__img {
+    width: calc(374 / var(--design-width) * var(--screen-width));
+    height: calc(210 / var(--design-width) * var(--screen-width));
+    position: relative;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .kiko-event {
+    &__list {
+      width: 100%;
+      height: 100%;
+      padding: 3rem;
+    }
+    &__img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

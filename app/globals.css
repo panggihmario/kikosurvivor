@@ -11,6 +11,8 @@
   --ocean-navy: rgba(0, 44, 69, 0.85);
   --ocean-teal-600: #0f7b93;
   --brick-red: #c55142;
+  --design-width: 1920; /* your reference width */
+  --screen-width: 100vw;
 }
 
 @theme inline {
@@ -58,4 +60,21 @@ body {
     Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   color: var(--background);
+}
+
+.kiko-bg {
+  background-image: url("../public/images/all_bg_3.png");
+  background-size: cover;
+  background-position: center;
+  height: auto;
+  width: 100%;
+  display: block;
+}
+
+.multiline-ellipsis {
+  display: -webkit-box; /* enables flexbox-like layout for ellipsis */
+  -webkit-line-clamp: 4; /* number of lines to show */
+  -webkit-box-orient: vertical; /* sets box orientation to vertical */
+  overflow: hidden; /* hides overflowing text */
+  text-overflow: ellipsis; /* adds the "..." effect */
 }

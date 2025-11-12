@@ -25,7 +25,7 @@ $height-nav: 3rem;
     display: none;
   }
   &__show-menu {
-    opacity: 1 !important;
+    top: $height-nav !important;
   }
   &__drawer {
     position: absolute;
@@ -58,14 +58,14 @@ $height-nav: 3rem;
     &__menu {
       position: fixed;
       background-color: rgba(17, 17, 17, 0.9);
-      top: $height-nav;
-      opacity: 0;
+      top: -100vh;
+      // opacity: 0;
       left: 0;
       width: 100%;
       transition: top 0.4s;
       padding-block: 1rem;
       height: 100%;
-      transition: opacity 0.4s;
+      transition: height 0.4s;
     }
     &__list {
       flex-direction: column;
