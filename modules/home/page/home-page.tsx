@@ -17,7 +17,7 @@ export default async function HomePage({
   const dict = await getDictionary(lang);
   return (
     <div>
-      <main>
+      <main id="home">
         <div className={styles["kiko__video-wrapper"]}>
           <video
             autoPlay

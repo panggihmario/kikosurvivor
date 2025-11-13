@@ -4,12 +4,14 @@ import styles from "./navbar.module.scss";
 import { FaXmark, FaBars, FaGlobe } from "react-icons/fa6";
 import KikoLogo from "@/public/images/all_logo_gameplus.png";
 import Link from "next/link";
-
+import { usePathname, useRouter } from "next/navigation";
 import { useState } from "react";
 import { LnDrawer } from "./ln-drawer";
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const router = useRouter();
+  const pathname = usePathname(); // e.g. /en/event
   const handleOpenMenu = () => {
     const menu = document.getElementById("navbar-menu");
     if (menu) {
@@ -34,6 +36,9 @@ export const Navbar = () => {
 
   const selectLn = (ln: string) => {
     setIsDrawerOpen(false);
+    const parts = pathname.split("/");
+    parts[1] = ln;
+    router.push(parts.join("/"));
   };
   return (
     <nav className={styles.navbar}>
@@ -50,10 +55,10 @@ export const Navbar = () => {
             </Link>
           </li>
           <li className="flex items-center gap-2">
-            <a href="#">Play Now!</a>
+            <Link href="/play">Play Now!</Link>
           </li>
           <li className="flex items-center gap-2">
-            <a href="#">Watch</a>
+            <Link href="/watch">Watch</Link>
           </li>
         </ul>
       </div>

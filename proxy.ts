@@ -4,12 +4,20 @@ const locales = ["en", "id"];
 
 export function proxy(request: Request) {
   const { pathname } = new URL(request.url);
-  const hasLocale = locales.some((l) => pathname.startsWith(`/${l}`));
 
+  if (
+    pathname.startsWith("/_next") ||
+    pathname.startsWith("/api") ||
+    pathname.startsWith("/images") ||
+    pathname.startsWith("/fonts") ||
+    pathname === "/favicon.ico"
+  ) {
+    return NextResponse.next();
+  }
+  const hasLocale = locales.some((l) => pathname.startsWith(`/${l}`));
   if (!hasLocale) {
     return NextResponse.redirect(new URL(`/en${pathname}`, request.url));
   }
-
   return NextResponse.next();
 }
 

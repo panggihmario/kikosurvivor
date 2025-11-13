@@ -7,12 +7,18 @@
   --background: #ffffff;
   --foreground: #171717;
   --blue-aqua: #0093c7;
+  --sky-blue: #33a0fa;
   --charcoal-900: rgba(33, 37, 41, 1);
   --ocean-navy: rgba(0, 44, 69, 0.85);
   --ocean-teal-600: #0f7b93;
   --brick-red: #c55142;
+  --navy-blue: #21294e;
+  --lime-green: #8dff23;
+  --sunset-orange: #ff7e05;
+  --coral-red: #e95a5a;
   --design-width: 1920; /* your reference width */
   --screen-width: 100vw;
+  --font-url: "/fonts/DimboRegular.otf";
 }
 
 @theme inline {
@@ -22,6 +28,11 @@
   --color-ocean-teal-600: var(--ocean-teal-600);
   --color-brick-red: var(--brick-red);
   --color-blue-aqua: var(--blue-aqua);
+  --color-navy-blue: var(--navy-blue);
+  --color-sky-blue: var(--sky-blue);
+  --color-lime-green: var(--lime-green);
+  --color-sunset-orange: var(--sunset-orange);
+  --color-coral-red: var(--coral-red);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --color-blue-aqua: var(--blue-aqua);
@@ -55,6 +66,21 @@
   }
 }
 
+@font-face {
+  font-family: "Dimbo";
+  src: url("../public/fonts/DimboRegular.otf") format("opentype");
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.font-dimbo {
+  font-family: "Dimbo", "Roboto";
+}
+
 body {
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
@@ -66,9 +92,13 @@ body {
   background-image: url("../public/images/all_bg_3.png");
   background-size: cover;
   background-position: center;
-  height: auto;
+
   width: 100%;
   display: block;
+}
+
+.kiko-width {
+  width: calc(1200 / var(--design-width) * var(--screen-width));
 }
 
 .multiline-ellipsis {

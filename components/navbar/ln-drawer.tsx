@@ -1,5 +1,4 @@
 import { FC } from "react";
-import Link from "next/link";
 import styles from "./navbar.module.scss";
 type LnDrawerProps = {
   selectLn: (ln: string) => void;
@@ -13,17 +12,17 @@ export const LnDrawer: FC<LnDrawerProps> = ({ selectLn }) => {
           onClick={() => selectLn("id")}
           className="p-2 hover:text-blue-aqua cursor-pointer flex items-center gap-2"
         >
-          <Link href="id">
+          <div>
             <span className="text-sm">Indonesia</span>{" "}
-          </Link>
+          </div>
         </li>
         <li
           onClick={() => selectLn("en")}
           className="p-2 hover:text-blue-aqua cursor-pointer flex items-center gap-2"
         >
-          <Link href="en">
+          <div>
             <span className="text-sm">English</span>{" "}
-          </Link>
+          </div>
         </li>
       </ul>
     </div>
