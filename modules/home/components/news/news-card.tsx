@@ -4,14 +4,16 @@ import Image from "next/image";
 import { VAR } from "@/lib/variable";
 import { NewsItem } from "@/types";
 import { FC } from "react";
+import { useRouter } from "next/navigation";
 
 type NewsCardProps = {
   data: NewsItem;
 };
 
 export const NewsCard: FC<NewsCardProps> = ({ data }) => {
-  const handleClick = (data: NewsItem) => {
-    console.log(data);
+  const router = useRouter();
+  const handleClick = (d: NewsItem) => {
+    router.push(`/event/${d.slug}`);
   };
 
   return (

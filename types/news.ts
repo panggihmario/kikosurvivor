@@ -6,4 +6,5 @@ export type NewsItem = {
   img_banner: string;
   author: string;
   created_at: string;
+  content?: string;
 };

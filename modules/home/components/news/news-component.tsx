@@ -3,6 +3,7 @@ import { getDictionary } from "@/locales";
 import { FC } from "react";
 import { useGetNews } from "../../hooks/use-get-news";
 import { NewsCard } from "./news-card";
+import Link from "next/link";
 
 type NewsProps = {
   lang: "en" | "id";
@@ -20,11 +21,11 @@ export const NewsComponent: FC<NewsProps> = async ({ lang }) => {
         </div>
         <div className="flex gap-2 items-center justify-center flex-wrap ">
           {dta.map((d) => (
-            <NewsCard data={d} />
+            <NewsCard key={d.id} data={d} />
           ))}
         </div>
         <div className="bg-blue-aqua p-2 w-fit mx-auto mt-4 rounded text-base font-medium cursor-pointer">
-          {dict.common.more}
+          <Link href="/event">{dict.common.more}</Link>
         </div>
       </div>
     </section>
