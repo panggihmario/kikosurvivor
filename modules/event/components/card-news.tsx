@@ -11,11 +11,8 @@ type NewsCardProps = {
   d: NewsItem;
 };
 export const CardNews: FC<NewsCardProps> = ({ d }) => {
-  const handleClick = (d: NewsItem) => {
-    window.open(`${window.location.href}/${d.slug}`, "_blank");
-  };
   return (
-    <li onClick={() => handleClick(d)}>
+    <li>
       <Link
         className="grid cursor-pointer sm:grid-cols-[max-content_1fr] gap-1 sm:gap-4 border-b border-b-blue-aqua sm:border-b-0 max-sm:pb-2"
         href={`/event/${d.slug}`}
