@@ -28,7 +28,7 @@ export const Features: FC<FeaturesProps> = ({ dict }) => {
         <Swiper
           spaceBetween={50}
           pagination={pagination}
-          modules={[Pagination]}
+          modules={[Pagination, Autoplay]}
           autoplay={{
             delay: 2500,
             disableOnInteraction: false,

@@ -1,4 +1,4 @@
-import BgFeature from "@/public/images/story.png";
+import BgFeature from "@/public/images/story_baru.png";
 import Image from "next/image";
 import styles from "../styles.module.scss";
 import { LangProps } from "@/types";
