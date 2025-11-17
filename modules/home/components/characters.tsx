@@ -33,25 +33,25 @@ export const Characters = () => {
           className={`${styles["tag-list"]} ${styles["scroller-inner"]}`}
         >
           <li>
-            <Image width={110} height={110} src={Karkus} alt="karkus" />
+            <Image src={Karkus} alt="karkus" />
           </li>
           <li>
-            <Image width={110} height={110} src={Kiko} alt="karkus" />
+            <Image src={Kiko} alt="karkus" />
           </li>
           <li>
-            <Image width={110} height={110} src={Lola} alt="karkus" />
+            <Image src={Lola} alt="karkus" />
           </li>
           <li>
-            <Image width={110} height={110} src={Poli} alt="karkus" />
+            <Image src={Poli} alt="karkus" />
           </li>
           <li>
-            <Image width={110} height={110} src={Patino} alt="Patino" />
+            <Image src={Patino} alt="Patino" />
           </li>
           <li>
-            <Image width={110} height={110} src={Pupus} alt="Patino" />
+            <Image src={Pupus} alt="Patino" />
           </li>
           <li>
-            <Image width={110} height={110} src={Tingting} alt="Patino" />
+            <Image src={Tingting} alt="Patino" />
           </li>
         </ul>
       </div>

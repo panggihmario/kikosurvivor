@@ -1,6 +1,6 @@
 import { getDictionary } from "@/locales";
 import Image from "next/image";
-import Logo from "@/public/images/all_logo_gameplus_new.png";
+import Logo from "@/public/images/logo_kikosurvivor.png";
 import AppStoreButton from "@/public/images/all_dwl_aps.png";
 import PlayStoreButton from "@/public/images/all_dwl_pls.png";
 import Plus from "@/public/images/hm_pre_3_plus.png";
@@ -8,7 +8,6 @@ import Person from "@/public/images/hm_pre_person.png";
 import Star from "@/public/images/hm_pre_star.png";
 import styles from "../styles.module.scss";
 import { NewsComponent, Intro, Characters, Features } from "../components";
-// import { NewsComponent } from "../components/news";
 
 export default async function HomePage({
   params,
