@@ -1,4 +1,4 @@
-import BgFeature from "@/public/images/hm_pre_char.png";
+import BgFeature from "@/public/images/story.png";
 import Image from "next/image";
 import styles from "../styles.module.scss";
 import { LangProps } from "@/types";

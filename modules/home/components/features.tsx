@@ -27,7 +27,7 @@ export const Features: FC<FeaturesProps> = ({ dict }) => {
   };
   return (
     <section className={styles["kiko__background"]}>
-      <div className="p-4">
+      <div className="p-4 sm:px-48">
         <Swiper
           spaceBetween={50}
           pagination={pagination}
@@ -42,7 +42,7 @@ export const Features: FC<FeaturesProps> = ({ dict }) => {
               <div>
                 <Image src={Webimg} alt="Feature 1" />
               </div>
-              <div className="text-bold text-blue-aqua text-3xl">
+              <div className="text-bold text-blue-aqua sm:text-3xl">
                 {dict.common.defeatEnemy}
               </div>
             </div>
@@ -52,7 +52,7 @@ export const Features: FC<FeaturesProps> = ({ dict }) => {
               <div>
                 <Image width={339} height={466} src={Webimg1} alt="Feature 1" />
               </div>
-              <div className="text-bold text-blue-aqua text-3xl m-auto">
+              <div className="text-bold text-blue-aqua sm:text-3xl m-auto">
                 {dict.common.conquerStages}
               </div>
             </div>
@@ -62,7 +62,7 @@ export const Features: FC<FeaturesProps> = ({ dict }) => {
               <div>
                 <Image src={Webimg2} alt="Feature 1" />
               </div>
-              <div className="text-bold text-blue-aqua text-3xl">
+              <div className="text-bold text-blue-aqua sm:text-3xl">
                 {dict.common.saveWorld}
               </div>
             </div>

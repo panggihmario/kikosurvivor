@@ -9,7 +9,6 @@ import Patino from "@/public/characters/patino.png";
 import Pupus from "@/public/characters/pupus.png";
 import Tingting from "@/public/characters/tingting.png";
 import Image from "next/image";
-import VampirePoli from "@/public/characters/vampire_poli.png";
 import { useEffect } from "react";
 export const Characters = () => {
   useEffect(() => {
@@ -34,28 +33,25 @@ export const Characters = () => {
           className={`${styles["tag-list"]} ${styles["scroller-inner"]}`}
         >
           <li>
-            <Image src={Karkus} alt="karkus" />
+            <Image width={110} height={110} src={Karkus} alt="karkus" />
           </li>
           <li>
-            <Image src={Kiko} alt="karkus" />
+            <Image width={110} height={110} src={Kiko} alt="karkus" />
           </li>
           <li>
-            <Image src={Lola} alt="karkus" />
+            <Image width={110} height={110} src={Lola} alt="karkus" />
           </li>
           <li>
-            <Image src={Poli} alt="karkus" />
+            <Image width={110} height={110} src={Poli} alt="karkus" />
           </li>
           <li>
-            <Image src={Patino} alt="Patino" />
+            <Image width={110} height={110} src={Patino} alt="Patino" />
           </li>
           <li>
-            <Image src={Pupus} alt="Patino" />
+            <Image width={110} height={110} src={Pupus} alt="Patino" />
           </li>
           <li>
-            <Image src={Tingting} alt="Patino" />
-          </li>
-          <li>
-            <Image src={VampirePoli} alt="vampire poli" />
+            <Image width={110} height={110} src={Tingting} alt="Patino" />
           </li>
         </ul>
       </div>
