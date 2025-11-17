@@ -1,14 +1,18 @@
 import styles from "../styles.module.scss";
 import Beyond from "@/public/images/hm_log_wcg_2.jpg";
 import Image from "next/image";
+import { useGetNews } from "@/modules/home/hooks/use-get-news";
+import { VAR } from "@/lib/variable";
 
-export default function EventPage() {
+export default async function EventPage() {
   const loopItems = [...Array.from({ length: 4 }, (_, i) => i + 1)];
+
+  const { dta } = await useGetNews(false);
   return (
     <main className="pt-12 min-h-[70vh] kiko-bg ">
       <div className={styles["kiko-event__list"]}>
         <ul className="grid gap-4">
-          {loopItems.map((loop, idx) => {
+          {dta.map((d, idx) => {
             return (
               <li
                 key={idx}
@@ -19,7 +23,7 @@ export default function EventPage() {
                 </div>
                 <div>
                   <div className="font-bold text-sm text-charcoal-900">
-                    Gerakan Anti Match Fixing
+                    {d.title}
                   </div>
                   <div className="line-clamp-4 max-sm:hidden text-[10px] h-fit text-gray-600">
                     Halo semuanya! Kami masih terus mencari metode baru untuk

@@ -7,7 +7,9 @@ import Plus from "@/public/images/hm_pre_3_plus.png";
 import Person from "@/public/images/hm_pre_person.png";
 import Star from "@/public/images/hm_pre_star.png";
 import styles from "../styles.module.scss";
-import { News, Intro, Characters, Features, Follow } from "../components";
+import { NewsComponent, Intro, Characters, Features } from "../components";
+// import { NewsComponent } from "../components/news";
+
 export default async function HomePage({
   params,
 }: {
@@ -96,7 +98,7 @@ export default async function HomePage({
             </div>
           </div>
         </div>
-        <News lang={lang} />
+        <NewsComponent lang={lang} />
         <Intro lang={lang} />
         <Characters />
         <Features dict={dict} />
