@@ -25,9 +25,7 @@ export default async function HomePage({
             className="w-full h-full object-cover"
             muted
             loop
-            src={
-              "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
-            }
+            src="/video/kiko.mp4"
           ></video>
           <div className="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2  w-full flex flex-col items-center justify-center gap-6 px-4">
             <div className="grid gap-3">
@@ -78,7 +76,7 @@ export default async function HomePage({
                   </div>
                 </div>
               </div>
-              <div className="flex flex-col mobile-xl:flex-row  gap-2 items-center">
+              {/* <div className="flex flex-col mobile-xl:flex-row  gap-2 items-center">
                 <Image
                   width={200}
                   height={60}
@@ -93,7 +91,7 @@ export default async function HomePage({
                   src={PlayStoreButton}
                   alt="App store Download Button"
                 />
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
