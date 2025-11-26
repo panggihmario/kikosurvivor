@@ -28,12 +28,12 @@ export default async function HomePage({
             src="/video/kiko.mp4"
           ></video>
           <div className="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2  w-full flex flex-col items-center justify-center gap-6 px-4">
-            <div className="grid gap-3">
+            <div className="grid gap-3 opacity-70">
               <Image
                 width={200}
                 height={200}
                 objectFit="contain"
-                className="mobile-xl:w-[400px] mobile-xl:h-[400px] mx-auto"
+                className="mobile-xl:w-[200px] mobile-xl:h-[200px] mx-auto"
                 src={Logo}
                 alt="Kiko Logo"
               />
@@ -77,7 +77,7 @@ export default async function HomePage({
                 </div>
               </div>
               {/* <div className="flex flex-col mobile-xl:flex-row  gap-2 items-center">
-                <Image
+                <Imag
                   width={200}
                   height={60}
                   objectFit="contain"
