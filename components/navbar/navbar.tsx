@@ -54,9 +54,9 @@ export const Navbar = () => {
               Event
             </Link>
           </li>
-          <li className="flex items-center gap-2">
+          {/* <li className="flex items-center gap-2">
             <Link href="/play">Play Now!</Link>
-          </li>
+          </li> */}
           <li className="flex items-center gap-2">
             <Link href="/watch">Watch</Link>
           </li>
